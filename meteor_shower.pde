@@ -25,7 +25,6 @@ class Circle{
   float z = random(0,20); //z value to give perspective, farther and near
   float xspeed = random(1,10); //x and y speeds
   float yspeed = map(z, 0, 20, 1,10);
-  //float len = map(z, 0, 20, 10, 20);
   
   void fall(){ //speeds of circles
     x = x + xspeed;
@@ -43,17 +42,16 @@ class Circle{
   void show(){
     float thick = map(z, 0, 20, 10, 100); //size of ellipse
     float sthick = map(z, 0, 20, .5, 20); //thickness of outline
-    //float tx = random(1,50);
-    //float ty = random(1,50);
+    
     strokeWeight(sthick);
     stroke(random(100,255),100,0);
     fill(100);
     ellipse(x,y,thick,thick);
-    //ellipse(x,y,tx,ty);
     
      if(mousePressed){
     float tx = random(10,100);
     float ty = random(10,100);
+    
     strokeWeight(sthick);
     stroke(255,255,100);
     fill(255);
