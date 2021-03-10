@@ -26,7 +26,7 @@ class Circle{
   float xspeed = random(1,10); //x and y speeds
   float yspeed = map(z, 0, 20, 1,10);
   
-  void fall(){ //speeds of circles
+  void fall(){ //speeds of circles and loops them back to beginning
     x = x + xspeed;
     y = y + yspeed;
     
